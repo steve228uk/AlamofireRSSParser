@@ -146,7 +146,7 @@ open class AlamofireRSSParser: NSObject, XMLParserDelegate {
                 currentItem.itemDescription = self.currentString
             }
             
-            if (elementName == "content:encoded") {
+            if ((elementName == "content:encoded") || (elementName == "content")) {
                 currentItem.content = self.currentString
             }
             
